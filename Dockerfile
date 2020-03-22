@@ -28,7 +28,7 @@ COPY RELEASE /
 COPY assets/ /assets/
 RUN /assets/setup
 
-RUN sed -i 's/retries 20/retries 50/g' /opt/gitlab/embedded/cookbooks/postgresql/resources/user.rb
+RUN sed -i 's/retries 20/retries 100/g' /opt/gitlab/embedded/cookbooks/postgresql/resources/user.rb
 
 # Allow to access embedded tools
 ENV PATH /opt/gitlab/embedded/bin:/opt/gitlab/bin:/assets:$PATH
